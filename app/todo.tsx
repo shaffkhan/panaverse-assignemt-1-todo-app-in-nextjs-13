@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-async function update(id, isDone,refresh) {
+async function update(id:any, isDone:any,refresh:any) {
   await fetch("/api/todo/update", {
     method: "POST",
 
@@ -12,7 +12,7 @@ async function update(id, isDone,refresh) {
 
 
 //funciton for delete
-async function del(id,refresh){
+async function del(id:any,refresh:any){
   await fetch(`/api/todo/delete?id=${id}`,{
     method:'DELETE',
    
@@ -21,7 +21,7 @@ async function del(id,refresh){
   refresh()
 }
 
-export default function Todo({ el }) {
+export default function Todo({ el }:any) {
   const router = useRouter();
   return (
     <div>

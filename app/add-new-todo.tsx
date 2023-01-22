@@ -1,11 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import  { React,useState } from "react";
+import { useState } from "react";
 
+import React from "react";
 
-
-
-async function add(name, refresh) {
+async function add(name:any, refresh:any) {
   await fetch("/api/todo/add", {
     method: "POST",
 

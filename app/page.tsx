@@ -11,6 +11,7 @@ export default function Home() {
     <>
       <div>
         <AddnewTodo />
+         {/* @ts-expect-error Server Component */}
         <TodoList  />
       </div>
     </>
