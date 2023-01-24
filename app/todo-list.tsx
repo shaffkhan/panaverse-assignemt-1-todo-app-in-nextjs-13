@@ -3,7 +3,7 @@ import Todo from "./todo";
 const todo = async () => {
   //learnt that use this way to fetch data , not to return data.json simply as it is a promise so it will return
   //undefined
-  let data = await fetch("http://localhost:3001/api/todo/list");
+  let data = await fetch("https://api-for-assignment-todo-app.vercel.app/api/todo/list");
   const newd = await data.json();
 
   return newd;

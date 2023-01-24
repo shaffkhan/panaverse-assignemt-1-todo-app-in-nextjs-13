@@ -2,7 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 async function update(id:any, isDone:any,refresh:any) {
-  await fetch("http://localhost:3001/api/todo/update", {
+  await fetch("https://api-for-assignment-todo-app.vercel.app/api/todo/update", {
     method: "POST",
     mode:'no-cors',
 
@@ -14,9 +14,9 @@ async function update(id:any, isDone:any,refresh:any) {
 
 //funciton for delete
 async function del(id:any,refresh:any){
-  await fetch(`http://localhost:3001/api/todo/delete?id=${id}`,{
+  await fetch(`/api/todo/delete?id=${id}`,{
     method:'DELETE',
-    mode:'no-cors'
+    // mode:'no-cors',
 
   });
   refresh()
